@@ -434,7 +434,7 @@ window.APP_DATA = {
     {
       "id": "P01",
       "title": "La brújula de las cuatro guardianas",
-      "riddle": "Cuatro guardianas vigilan el patio: dos llevan traje y dos muestran su esqueleto. Buscad la que señala entre el norte y el este. Cuando vuestra mirada quede alineada con ella, el sexto sello abrirá la siguiente puerta.",
+      "riddle": "Cuatro guardianas vigilan el patio: dos llevan traje y dos muestran su esqueleto. Buscad la que señala entre el norte y el este. Cuando vuestra mirada quede alineada con ella, el primer dígito os revelará el sello.",
       "exerciseId": "E01",
       "correctHash": "a1bf6ad670060283f93e8d606d5e6610cb435fe383a3f452036f3924eedb243c",
       "decoyHashes": [
@@ -450,7 +450,7 @@ window.APP_DATA = {
     {
       "id": "P02",
       "title": "La mesa sin disfraz",
-      "riddle": "Cuatro mesas descansan en el patio, pero casi todas ocultan su rostro bajo pintura. Encontrad la que conserva su piel desnuda. Desde su centro, mirad a los tres gigantes con raíces que la rodean: uno de ellos custodia el sello.",
+      "riddle": "Cuatro mesas descansan en el patio, pero casi todas ocultan su rostro bajo pintura. Encontrad la que conserva su piel desnuda. Desde su centro, mirad a los tres gigantes con raíces que la rodean: el sello será el único visible .",
       "exerciseId": "E02",
       "correctHash": "60886096a8a6e350a9f4dd109ea508192d28e56633161400a009008da7594d9d",
       "decoyHashes": [
@@ -465,7 +465,7 @@ window.APP_DATA = {
     {
       "id": "P03",
       "title": "La puerta vedada y el reino marino",
-      "riddle": "Salidas hay muchas, pero una llave pertenece solo a quienes enseñan. Cerca duerme un pequeño reino de criaturas marinas. Desde allí, avanzad tres pies hacia el sur: el agua señalará el sello.",
+      "riddle": "Salidas hay muchas, pero una llave pertenece solo a quienes enseñan. Cerca duerme un pequeño reino de criaturas marinas. Desde allí, avanzad tres pies hacia el sur y encontraréis el sello.",
       "exerciseId": "E03",
       "correctHash": "8eaebb432488e0cccc259514822bbe2b7c692117091a2d8f0b2673bf3e0747e9",
       "decoyHashes": [
@@ -479,7 +479,7 @@ window.APP_DATA = {
     {
       "id": "P04",
       "title": "Los artefactos del estío",
-      "riddle": "Cuando el estío convierte las aulas en hornos, estos artefactos devuelven el aliento. Hallad una fachada donde solo dos respiren juntos. Desde arriba a la izquierda, buscad la tercera potencia de su número.",
+      "riddle": "Cuando el estío convierte las aulas en hornos, estos artefactos devuelven el aliento. Hallad una fachada donde solo dos respiren juntos. Desde arriba a la izquierda, buscad la tercera potencia de su número menos cinco.",
       "exerciseId": "E04",
       "correctHash": "92de15fecb884a8ce1cb9861a7b396acf868353476b70c9aec42e24c08c1a697",
       "decoyHashes": [
@@ -495,7 +495,7 @@ window.APP_DATA = {
     {
       "id": "P05",
       "title": "Los círculos con cinco hijos",
-      "riddle": "Seis círculos reposan en el patio, y cada uno cría cinco pequeños a su alrededor. Buscad aquel cuyo único sello vista uno de los colores primarios.",
+      "riddle": "Seis círculos reposan en el patio, y cada uno cría cinco pequeños a su alrededor. Buscad aquel cuyo único sello a los tontos espabila.",
       "exerciseId": "E05",
       "correctHash": "f8e61b26ff67f6ef94e0f50baf239b1c67c19b6d1cc276caabd632a64557ae08",
       "decoyHashes": [
@@ -525,7 +525,7 @@ window.APP_DATA = {
     {
       "id": "P07",
       "title": "El origen de los atletas",
-      "riddle": "Donde nacen los atletas, cuatro superficies blancas recogen ideas a su alrededor. Buscad el lado donde ninguna de ellas vigila y avanzad hacia la puerta el número que ellas mismas forman.",
+      "riddle": "Donde nacen los atletas, cuatro superficies blancas recogen ideas a su alrededor. Buscad el lado donde ninguna de ellas vigila y desde la puerta contad el número de las mismas.",
       "exerciseId": "E07",
       "correctHash": "c9e6e773acdea982809d6f326354393143569f37e9c2e164654d70e641ec6128",
       "decoyHashes": [
@@ -596,7 +596,7 @@ window.APP_DATA = {
     {
       "id": "P12",
       "title": "La puerta de Roma",
-      "riddle": "En este recinto, un edificio alcanza la letra D según quienes cayeron en el año 476. Buscad la posición capaz de dividir CCCXLIII.",
+      "riddle": "En este recinto, un edificio alcanza la letra D según quienes cayeron en el año 476. Buscad la posición capaz de dividir CCCXLIII empezando desde la puerta.",
       "exerciseId": "E12",
       "correctHash": "1e401558bc3272db27d7f4a75282f15efbfeb01565f19ac764f6b603d3ad53e2",
       "decoyHashes": [
