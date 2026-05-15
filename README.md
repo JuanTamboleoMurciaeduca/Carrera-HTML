@@ -70,6 +70,20 @@ Usa `qr-links.md` con cualquier generador de QR externo.
 - Bonus por rapidez del ejercicio: `max(0, 10 - floor(segundos / 30))`
 - Penalización final por tiempo total: `floor(segundos_totales / 60)`
 
+
+## Ejercicios
+
+Cada ejercicio muestra ahora una sección llamada `Cómo debe quedar la página`.
+
+Esa sección aclara:
+
+- qué tipo de página o fragmento están construyendo;
+- qué partes debe tener;
+- qué etiquetas o selectores pueden aparecer;
+- qué reglas siguen los huecos.
+
+No indica la respuesta de cada hueco. Sirve como banco de orientación para evitar dudas de interpretación.
+
 ## Exportación
 
 Cada grupo puede pulsar `Exportar JSON`. El archivo incluye grupo, ruta, puntuación, tiempos, eventos, QR incorrectos y respuestas enviadas.

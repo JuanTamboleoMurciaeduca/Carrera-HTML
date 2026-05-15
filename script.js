@@ -110,16 +110,20 @@ function renderExercise(message = '', messageClass = 'bad') {
   const card = byId('exerciseCard');
   card.classList.remove('hidden');
   const lines = ex.lines.map(line => `<div class="line">${lineToHtml(line, ex.blanks)}</div>`).join('');
+  const guidance = Array.isArray(ex.guidance) && ex.guidance.length
+    ? `<div class="exercise-help"><h3>Cómo debe quedar la página</h3><ul>${ex.guidance.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`
+    : '';
   card.innerHTML = `
-    <h2>${ex.title}</h2>
-    <p>${ex.statement}</p>
+    <h2>${escapeHtml(ex.title)}</h2>
+    <p>${escapeHtml(ex.statement)}</p>
+    ${guidance}
     ${renderStats()}
     <div class="codebox">${lines}</div>
     <div class="exercise-actions">
       <button id="checkExerciseBtn">Comprobar código</button>
       <button class="secondary" id="exportBtn2">Exportar JSON</button>
     </div>
-    <p id="exerciseMessage" class="message ${messageClass}">${message}</p>
+    <p id="exerciseMessage" class="message ${messageClass}">${escapeHtml(message)}</p>
   `;
   byId('checkExerciseBtn').addEventListener('click', checkExercise);
   byId('exportBtn2').addEventListener('click', exportJson);
@@ -313,7 +317,8 @@ function renderTeacher(teacher) {
         <p><strong>Solución:</strong> ${ch.solution}</p>
         <p><strong>QR correcto:</strong> ${ch.correctLabel}</p>
         <details><summary>Enlaces de QR</summary><ol class="qr-list">${qrHtml}</ol></details>
-        <p><strong>Ejercicio:</strong> ${ex.title}</p>
+        <p><strong>Ejercicio:</strong> ${escapeHtml(ex.title)}</p>
+        ${Array.isArray(ex.guidance) ? `<details><summary>Indicaciones visibles para el alumnado</summary><ul>${ex.guidance.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul></details>` : ''}
         <pre class="teacher-code">${escapeHtml(ex.solvedLines.join('\n'))}</pre>
       </article>`;
   }).join('');

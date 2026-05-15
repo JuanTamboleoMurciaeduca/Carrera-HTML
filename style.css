@@ -200,3 +200,26 @@ th { background: #eee7da; }
   .riddle { font-size: 18px; }
   main { padding: 10px; }
 }
+
+.exercise-help {
+  background: #f8f4e8;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--accent);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 16px 0;
+}
+
+.exercise-help h3 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+}
+
+.exercise-help ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.exercise-help li {
+  margin: 6px 0;
+}
