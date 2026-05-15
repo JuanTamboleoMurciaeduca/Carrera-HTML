@@ -122,11 +122,13 @@ function renderExercise(message = '', messageClass = 'bad') {
     <div class="exercise-actions">
       <button id="checkExerciseBtn">Comprobar código</button>
       <button class="secondary" id="exportBtn2">Exportar JSON</button>
+      <button class="danger" id="resetBtnExercise">Reiniciar este dispositivo</button>
     </div>
     <p id="exerciseMessage" class="message ${messageClass}">${escapeHtml(message)}</p>
   `;
   byId('checkExerciseBtn').addEventListener('click', checkExercise);
   byId('exportBtn2').addEventListener('click', exportJson);
+  byId('resetBtnExercise').addEventListener('click', resetState);
   updateTopbar();
 }
 async function checkExercise() {
