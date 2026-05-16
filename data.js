@@ -1,5 +1,5 @@
 window.APP_DATA = {
-  "version": "3.0.0",
+  "version": "3.1.0",
   "storageKey": "carreraHtmlStateSinGrupoV1",
   "route": [
     "P01",
@@ -386,7 +386,7 @@ window.APP_DATA = {
         "</{{b3}}>",
         "<{{b7}}>",
         "  <{{b8}}>Reto encontrado</{{b8}}>",
-        "  <{{b9}}>El grupo ha llegado al lugar correcto.</{{b9}}>",
+        "  <{{b9}}>El equipo ha llegado al lugar correcto.</{{b9}}>",
         "  <{{b10}}>",
         "    <h2>Prueba</h2>",
         "    <{{b11}}>Leed el código con calma.</{{b11}}>",
@@ -484,6 +484,7 @@ window.APP_DATA = {
       "guidance": [
         "La página debe ser un documento HTML completo: declaración inicial, raíz en español, cabecera técnica y cuerpo visible.",
         "En los huecos que están dentro de < > escribid solo el nombre de la etiqueta, sin símbolos.",
+        "Los valores que no son etiquetas también importan: el DOCTYPE debe ser html, el charset debe ser UTF-8 y el rel del enlace CSS debe ser stylesheet.",
         "La parte que no se ve en la página contiene metadatos, el título de la pestaña y el enlace al CSS.",
         "La parte visible contiene un título principal, párrafos, una zona principal de contenido y un pie de página.",
         "Etiquetas que pueden aparecer: html, head, body, title, h1, p, main y footer."
@@ -492,7 +493,7 @@ window.APP_DATA = {
     {
       "id": "E02",
       "title": "CSS solo con etiquetas",
-      "statement": "Completad una hoja CSS básica para una página con cabecera, título principal y párrafos.",
+      "statement": "Completad una hoja CSS básica para una página con cabecera, título principal y párrafos. Debéis respetar los colores y medidas indicados.",
       "lines": [
         "{{b1}} {",
         "  background-color: {{b2}};",
@@ -635,8 +636,10 @@ window.APP_DATA = {
       "guidance": [
         "La hoja CSS debe dar estilo a toda la página, a la cabecera, al título principal y a los párrafos.",
         "Los bloques que terminan en { son selectores de etiqueta: no uséis . ni #.",
-        "Los huecos de la izquierda son normalmente etiquetas HTML; los huecos de la derecha son valores de CSS.",
-        "Revisad las unidades: algunos valores necesitan px, otros son palabras de color, alineación o familia de letra.",
+        "El cuerpo de la página debe tener fondo lightblue, texto black, margen 0 y fuente Arial.",
+        "La cabecera debe tener fondo darkblue, texto white, texto centrado y padding de 20px.",
+        "El título h1 debe medir 32px y quedar centrado.",
+        "Los párrafos deben tener interlineado 1.5 y tamaño de letra 18px.",
         "Selectores que pueden aparecer: body, header, h1 y p."
       ]
     },
@@ -652,7 +655,7 @@ window.APP_DATA = {
         "  <{{b6}} href=\"https://www.educarm.es\">Abrir Educarm</{{b6}}>",
         "  <{{b7}}>",
         "    <h2>Normas</h2>",
-        "    <{{b8}}>Escanear solo con el móvil del grupo.</{{b8}}>",
+        "    <{{b8}}>Escanear solo con el móvil de la carrera.</{{b8}}>",
         "    <{{b8}}>No tocar los códigos de otros equipos.</{{b8}}>",
         "  </{{b7}}>",
         "</{{b1}}>"
@@ -717,10 +720,10 @@ window.APP_DATA = {
       ],
       "guidance": [
         "La página debe mostrar una galería sencilla: título, explicación, imagen, enlace externo y normas.",
-        "La imagen necesita una etiqueta de imagen y un atributo para el texto alternativo.",
-        "El enlace necesita una etiqueta que use href.",
-        "Las normas deben estar agrupadas dentro de una zona de contenido, con dos párrafos.",
-        "Etiquetas que pueden aparecer: main, h1, p, img, a y section."
+        "La imagen usa la etiqueta img y el atributo alt para describirla; no necesita etiqueta de cierre.",
+        "El enlace usa la etiqueta a y el atributo href ya aparece escrito.",
+        "Las normas deben estar agrupadas dentro de una sección de contenido, con dos párrafos.",
+        "Etiquetas que pueden aparecer: main, h1, p, img, a y section. También aparece el atributo alt."
       ]
     },
     {
@@ -777,10 +780,10 @@ window.APP_DATA = {
         }
       ],
       "guidance": [
-        "La página debe mostrar una tabla de clasificación.",
+        "La página debe mostrar una tabla de clasificación con tres columnas.",
         "Primero va una fila de encabezados; debajo van dos filas de datos.",
-        "Los encabezados no usan la misma etiqueta que las celdas normales.",
-        "Cada grupo de celdas horizontales debe estar dentro de una fila.",
+        "Los encabezados usan una etiqueta distinta a las celdas normales.",
+        "Cada grupo horizontal de celdas debe estar dentro de una fila.",
         "Etiquetas que pueden aparecer: table, tr, th y td."
       ]
     },
@@ -844,9 +847,9 @@ window.APP_DATA = {
       ],
       "guidance": [
         "La sección contiene dos partes: material necesario y pasos del reto.",
-        "El material no tiene orden obligatorio; los pasos sí tienen orden.",
+        "El material no tiene orden obligatorio; debe ir en una lista no ordenada.",
+        "Los pasos sí tienen orden; deben ir en una lista ordenada.",
         "Todos los elementos individuales de ambas listas usan la misma etiqueta de elemento.",
-        "Los títulos secundarios deben marcar cada bloque de contenido.",
         "Etiquetas que pueden aparecer: section, h2, ul, ol y li."
       ]
     },
@@ -937,7 +940,7 @@ window.APP_DATA = {
     {
       "id": "E07",
       "title": "Modelo de caja básico",
-      "statement": "Completad el CSS de cajas básicas usando solo selectores de etiqueta.",
+      "statement": "Completad el CSS de cajas básicas usando solo selectores de etiqueta. Debéis respetar los colores, medidas y bordes indicados.",
       "lines": [
         "{{b1}} {",
         "  background-color: {{b2}};",
@@ -1078,8 +1081,10 @@ window.APP_DATA = {
       "guidance": [
         "El CSS debe organizar cajas básicas: cabecera, zona principal, secciones y pie.",
         "Los selectores son solo etiquetas HTML; no hay clases ni identificadores.",
-        "Los huecos de propiedades ya están escritos; completad selectores y valores.",
-        "Los bordes necesitan grosor, estilo y color; algunos huecos solo piden una parte.",
+        "La cabecera debe tener fondo lightgray, padding de 20px y texto centrado.",
+        "main debe tener margin 10px, padding 15px y borde 2px solid black.",
+        "section debe tener margin 10px, padding 10px y borde 1px solid gray.",
+        "footer debe tener el texto centrado.",
         "Selectores que pueden aparecer: header, main, section y footer."
       ]
     },
@@ -1141,9 +1146,660 @@ window.APP_DATA = {
         "La página debe mostrar una tabla de pistas con dos columnas.",
         "La primera fila contiene los encabezados de las columnas.",
         "Después hay tres filas con datos normales.",
-        "Recordad la diferencia entre fila, encabezado y celda de datos.",
+        "Recordad la diferencia entre tabla, fila, encabezado y celda de datos.",
         "Etiquetas que pueden aparecer: table, tr, th y td."
       ]
     }
-  ]
+  ],
+  "teacherCodeHash": "b54b0c7a6daff72e5e0366a6d944e3f13716fed273c38b23e626a5fb4ba033d7",
+  "teacher": {
+    "app": "Carrera-HTML",
+    "routes": {
+      "Ruta única": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08"
+      ]
+    },
+    "scoring": {
+      "qrCorrect": 10,
+      "qrWrong": -3,
+      "exerciseBase": 20,
+      "wrongBlank": -2
+    },
+    "challenges": [
+      {
+        "id": "P01",
+        "title": "La brújula de las cuatro guardianas",
+        "riddle": "Cuatro guardianas vigilan el patio: dos llevan traje y dos muestran su esqueleto. Buscad la que señala entre el norte y el este. Cuando vuestra mirada quede alineada con ella, el primer dígito os revelará el sello.",
+        "solution": "Pista de fútbol abajo, 6.º código QR.",
+        "correctLabel": "6.º QR",
+        "exerciseId": "E01",
+        "qrCards": [
+          {
+            "kind": "correcto",
+            "label": "6.º QR",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=MLBcp7zMbv1bTOxgn8pbsg"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 1",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=83UnbB2xcxTDczLq2gojEA"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 2",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=et3AOKLdDtXQYenPEHJxWw"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 3",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=S2ZluszQ1g9sn3uA18mwxg"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 4",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=CFyq6oYWeWb5Pk3ZxJSNQg"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 5",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=zdV6kykC4mcjQ9fgtFGgTQ"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 6",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=5diUV9ZVWdzSvXQztvt8Tw"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 7",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=MgcArP4HKulQBBNlqEdt3Q"
+          }
+        ]
+      },
+      {
+        "id": "P02",
+        "title": "La mesa sin disfraz",
+        "riddle": "Cuatro mesas descansan en el patio, pero casi todas ocultan su rostro bajo pintura. Encontrad la que conserva su piel desnuda. Desde su centro, mirad a los tres gigantes con raíces que la rodean: el sello será el único visible .",
+        "solution": "Mesa sin pintar, QR en árbol de enfrente.",
+        "correctLabel": "Árbol de enfrente",
+        "exerciseId": "E02",
+        "qrCards": [
+          {
+            "kind": "correcto",
+            "label": "Árbol de enfrente",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=fMkFvDhM8Efdx4zXcmRRBw"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 1",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=ghmIejL0nDu29XxrBzJ1NQ"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 2",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=YWxzWE967oIeplcJ9dyN6w"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 3",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=9rog1FzzQXYefMu9CF5Cgg"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 4",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=vBZoHE7MrHWbzbiDyF0luA"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 5",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=UPkVPt0zzxGymqLyJuGuWg"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 6",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=XTd3b991txzpd539R5neuQ"
+          }
+        ]
+      },
+      {
+        "id": "P03",
+        "title": "La puerta vedada y el reino marino",
+        "riddle": "Salidas hay muchas, pero una llave pertenece solo a quienes enseñan. Cerca duerme un pequeño reino de criaturas marinas. Desde allí, avanzad tres pies hacia el sur y encontraréis el sello.",
+        "solution": "Fuente cerca de la puerta pequeña.",
+        "correctLabel": "Fuente cerca de la puerta pequeña",
+        "exerciseId": "E03",
+        "qrCards": [
+          {
+            "kind": "correcto",
+            "label": "Fuente cerca de la puerta pequeña",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=zvILfzWRK6zxhnSP7Bu5cw"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 1",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=hVGVxWYeZFU2FlZOBIPCKw"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 2",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=f59ziJZH3lHAKe6GYRwHmA"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 3",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=oLtotvIzvBENNcrSxRobOg"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 4",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=eUBR1UKxgYtRDbJJ8YonWw"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 5",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=uhywXK7puwzMVARawWOEPQ"
+          }
+        ]
+      },
+      {
+        "id": "P04",
+        "title": "Los artefactos del estío",
+        "riddle": "Cuando el estío convierte las aulas en hornos, estos artefactos devuelven el aliento. Hallad una fachada donde solo dos respiren juntos. Desde arriba a la izquierda, buscad la tercera potencia de su número menos cinco.",
+        "solution": "8.º QR entre dos aires del pabellón nuevo.",
+        "correctLabel": "8.º QR",
+        "exerciseId": "E04",
+        "qrCards": [
+          {
+            "kind": "correcto",
+            "label": "8.º QR",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=T6zYqyy4kTL87RQLxD1OLQ"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 1",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=0QfALLAeQjoGrZcVQLGXtQ"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 2",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=sw9Vs4HiL1n0TMuzNxzlhg"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 3",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=iQyoLtgSCQNmh0O6k7uwfQ"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 4",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=1i187hAlu5mgDe8G7eR3zg"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 5",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=xkQrmrWc8CSondoUmcBzHg"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 6",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=wYUbx9YWAYcr9Bxr9ExD2A"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 7",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=7lQiFrrxBMxDbpzjwc0n4w"
+          }
+        ]
+      },
+      {
+        "id": "P05",
+        "title": "Los círculos con cinco hijos",
+        "riddle": "Seis círculos reposan en el patio, y cada uno cría cinco pequeños a su alrededor. Buscad aquel cuyo único sello a los tontos espabila.",
+        "solution": "Mesas detrás, código donde solo amarillo o azul.",
+        "correctLabel": "QR único amarillo o azul",
+        "exerciseId": "E05",
+        "qrCards": [
+          {
+            "kind": "correcto",
+            "label": "QR único amarillo o azul",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=8yDoC4Y6ztbFbbOQHXGhbA"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 1",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=eAhurvYflHhu6XpieTwXlQ"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 2",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=xXeZUVjBiaXgn59QmftSow"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 3",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=aI46WQrZUAs1CFQbJn9csA"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 4",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=EhzMONGhfepkfuJdEixibQ"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 5",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=TwlvTFdSWHwdUVwQsAukPA"
+          }
+        ]
+      },
+      {
+        "id": "P06",
+        "title": "La escapada del fuego",
+        "riddle": "Cuando el calor extremo despierta, esta ruta promete huida. En la escalera metálica del pabellón nuevo, empezad por el punto más cercano al corazón de la tierra y contad hasta los pecados capitales.",
+        "solution": "Escaleras de incendio del pabellón nuevo, 7.º QR.",
+        "correctLabel": "7.º QR",
+        "exerciseId": "E06",
+        "qrCards": [
+          {
+            "kind": "correcto",
+            "label": "7.º QR",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=UDZbIcslWmiqBIE0CEgS1g"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 1",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=xlpxHAmOkv8F1MSzRvsHZw"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 2",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=JS0whatPiVY9cWQDZxUnaw"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 3",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=gP44RhT76mfegtOc6p96rQ"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 4",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=mqehHhjORycBGsEaQb718A"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 5",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=slChlOGMAg3KzfyeEuV8Ng"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 6",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=obw6SmgbgRWSoavvRd2ORQ"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 7",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=ozBwNizMrY44Zc5SVKNMIQ"
+          }
+        ]
+      },
+      {
+        "id": "P07",
+        "title": "El origen de los atletas",
+        "riddle": "Donde nacen los atletas, cuatro superficies blancas recogen ideas a su alrededor. Buscad el lado donde ninguna de ellas vigila y desde la puerta contad el número de las mismas.",
+        "solution": "Pabellón deportivo, fachada cerca de la fuente, 4.º QR.",
+        "correctLabel": "4.º QR hacia la puerta",
+        "exerciseId": "E07",
+        "qrCards": [
+          {
+            "kind": "correcto",
+            "label": "4.º QR hacia la puerta",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=1AtiyNYHLX5OU0IWqR9NoQ"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 1",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=TqthjAS7cX0kgvJ1E17pRQ"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 2",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=4x3CUz17vg9wsSjsrBVkLg"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 3",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=3GYGOYJcnCn2HydOJ8Zk3A"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 4",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=XKLucVz51WVvAm2rd8rzkg"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 5",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=XbqZVEhL12TBJHgPjvJs2A"
+          }
+        ]
+      },
+      {
+        "id": "P08",
+        "title": "La puerta de Roma",
+        "riddle": "En este recinto, un edificio alcanza la letra D según quienes cayeron en el año 476. Buscad la posición capaz de dividir CCCXLIII empezando desde la puerta.",
+        "solution": "7.º QR en la puerta del pabellón nuevo.",
+        "correctLabel": "7.º QR",
+        "exerciseId": "E08",
+        "qrCards": [
+          {
+            "kind": "correcto",
+            "label": "7.º QR",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=FZUXn61jdnAoSFmtspJTxA"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 1",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=YXKKnrTQYNxZ5LSsnnxEDA"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 2",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=3jqJjKDA7HTzh2K2q17UMA"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 3",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=QIkalbS7wykrvHoTdFxbiQ"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 4",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=XBmAHFPIBuq8YQQLjIAGXw"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 5",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=amz3kn0JUhojeKZbb18mxg"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 6",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=w6UlRiUJ4zZ9JF0I45qOWA"
+          },
+          {
+            "kind": "señuelo",
+            "label": "Señuelo 7",
+            "url": "https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?t=qqnlelfaDczvS1oeSlWldA"
+          }
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "id": "E01",
+        "title": "Documento HTML completo",
+        "statement": "Construid una página HTML completa sobre el reto. Debe tener cabecera técnica y contenido visible bien ordenado.",
+        "guidance": [
+          "La página debe ser un documento HTML completo: declaración inicial, raíz en español, cabecera técnica y cuerpo visible.",
+          "En los huecos que están dentro de < > escribid solo el nombre de la etiqueta, sin símbolos.",
+          "Los valores que no son etiquetas también importan: el DOCTYPE debe ser html, el charset debe ser UTF-8 y el rel del enlace CSS debe ser stylesheet.",
+          "La parte que no se ve en la página contiene metadatos, el título de la pestaña y el enlace al CSS.",
+          "La parte visible contiene un título principal, párrafos, una zona principal de contenido y un pie de página.",
+          "Etiquetas que pueden aparecer: html, head, body, title, h1, p, main y footer."
+        ],
+        "solvedLines": [
+          "<!DOCTYPE html>",
+          "<html lang=\"es\">",
+          "<head>",
+          "  <meta charset=\"UTF-8\">",
+          "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+          "  <title>Crónica del patio</title>",
+          "  <link rel=\"stylesheet\" href=\"style.css\">",
+          "</head>",
+          "<body>",
+          "  <h1>Reto encontrado</h1>",
+          "  <p>El equipo ha llegado al lugar correcto.</p>",
+          "  <main>",
+          "    <h2>Prueba</h2>",
+          "    <p>Leed el código con calma.</p>",
+          "  </main>",
+          "  <footer>IES - Carrera-HTML</footer>",
+          "</body>",
+          "</html>"
+        ]
+      },
+      {
+        "id": "E02",
+        "title": "CSS solo con etiquetas",
+        "statement": "Completad una hoja CSS básica para una página con cabecera, título principal y párrafos. Debéis respetar los colores y medidas indicados.",
+        "guidance": [
+          "La hoja CSS debe dar estilo a toda la página, a la cabecera, al título principal y a los párrafos.",
+          "Los bloques que terminan en { son selectores de etiqueta: no uséis . ni #.",
+          "El cuerpo de la página debe tener fondo lightblue, texto black, margen 0 y fuente Arial.",
+          "La cabecera debe tener fondo darkblue, texto white, texto centrado y padding de 20px.",
+          "El título h1 debe medir 32px y quedar centrado.",
+          "Los párrafos deben tener interlineado 1.5 y tamaño de letra 18px.",
+          "Selectores que pueden aparecer: body, header, h1 y p."
+        ],
+        "solvedLines": [
+          "body {",
+          "  background-color: lightblue;",
+          "  color: black;",
+          "  margin: 0;",
+          "  font-family: Arial;",
+          "}",
+          "",
+          "header {",
+          "  background-color: darkblue;",
+          "  color: white;",
+          "  text-align: center;",
+          "  padding: 20px;",
+          "}",
+          "",
+          "h1 {",
+          "  font-size: 32px;",
+          "  text-align: center;",
+          "}",
+          "",
+          "p {",
+          "  line-height: 1.5;",
+          "  font-size: 18px;",
+          "}"
+        ]
+      },
+      {
+        "id": "E03",
+        "title": "Enlaces e imágenes",
+        "statement": "Completad una página de galería con imagen, enlace y normas del reto.",
+        "guidance": [
+          "La página debe mostrar una galería sencilla: título, explicación, imagen, enlace externo y normas.",
+          "La imagen usa la etiqueta img y el atributo alt para describirla; no necesita etiqueta de cierre.",
+          "El enlace usa la etiqueta a y el atributo href ya aparece escrito.",
+          "Las normas deben estar agrupadas dentro de una sección de contenido, con dos párrafos.",
+          "Etiquetas que pueden aparecer: main, h1, p, img, a y section. También aparece el atributo alt."
+        ],
+        "solvedLines": [
+          "<main>",
+          "  <h1>Galería del reto</h1>",
+          "  <p>Esta imagen muestra una zona del patio.</p>",
+          "  <img src=\"patio.jpg\" alt=\"Foto del patio\">",
+          "  <a href=\"https://www.educarm.es\">Abrir Educarm</a>",
+          "  <section>",
+          "    <h2>Normas</h2>",
+          "    <p>Escanear solo con el móvil de la carrera.</p>",
+          "    <p>No tocar los códigos de otros equipos.</p>",
+          "  </section>",
+          "</main>"
+        ]
+      },
+      {
+        "id": "E04",
+        "title": "Tabla de clasificación",
+        "statement": "Completad una tabla de clasificación con encabezados y filas de datos.",
+        "guidance": [
+          "La página debe mostrar una tabla de clasificación con tres columnas.",
+          "Primero va una fila de encabezados; debajo van dos filas de datos.",
+          "Los encabezados usan una etiqueta distinta a las celdas normales.",
+          "Cada grupo horizontal de celdas debe estar dentro de una fila.",
+          "Etiquetas que pueden aparecer: table, tr, th y td."
+        ],
+        "solvedLines": [
+          "<table>",
+          "  <tr>",
+          "    <th>Equipo</th>",
+          "    <th>Pista</th>",
+          "    <th>Puntos</th>",
+          "  </tr>",
+          "  <tr>",
+          "    <td>Equipo A</td>",
+          "    <td>Pista 1</td>",
+          "    <td>30</td>",
+          "  </tr>",
+          "  <tr>",
+          "    <td>Equipo B</td>",
+          "    <td>Pista 2</td>",
+          "    <td>28</td>",
+          "  </tr>",
+          "</table>"
+        ]
+      },
+      {
+        "id": "E05",
+        "title": "Listas y estructura",
+        "statement": "Completad una sección con una lista de materiales y una lista de pasos.",
+        "guidance": [
+          "La sección contiene dos partes: material necesario y pasos del reto.",
+          "El material no tiene orden obligatorio; debe ir en una lista no ordenada.",
+          "Los pasos sí tienen orden; deben ir en una lista ordenada.",
+          "Todos los elementos individuales de ambas listas usan la misma etiqueta de elemento.",
+          "Etiquetas que pueden aparecer: section, h2, ul, ol y li."
+        ],
+        "solvedLines": [
+          "<section>",
+          "  <h2>Material necesario</h2>",
+          "  <ul>",
+          "    <li>Móvil</li>",
+          "    <li>Cuaderno</li>",
+          "    <li>Bolígrafo</li>",
+          "  </ul>",
+          "  <h2>Pasos</h2>",
+          "  <ol>",
+          "    <li>Leer la pista</li>",
+          "    <li>Buscar el lugar</li>",
+          "    <li>Escanear el QR</li>",
+          "    <li>Completar el código</li>",
+          "  </ol>",
+          "</section>"
+        ]
+      },
+      {
+        "id": "E06",
+        "title": "Página semántica",
+        "statement": "Completad una estructura semántica con cabecera, contenido principal, secciones y pie.",
+        "guidance": [
+          "El fragmento debe formar una página con estructura semántica: cabecera, contenido principal y pie.",
+          "Dentro del contenido principal hay dos bloques independientes de información.",
+          "Cada bloque interno tiene un título secundario y un párrafo.",
+          "No uséis div: se esperan etiquetas semánticas básicas vistas en clase.",
+          "Etiquetas que pueden aparecer: header, h1, p, main, section, h2 y footer."
+        ],
+        "solvedLines": [
+          "<header>",
+          "  <h1>Carrera-HTML</h1>",
+          "  <p>Reto de patio</p>",
+          "</header>",
+          "",
+          "<main>",
+          "  <section>",
+          "    <h2>Prueba actual</h2>",
+          "    <p>Resuelve el código para avanzar.</p>",
+          "  </section>",
+          "  <section>",
+          "    <h2>Consejo</h2>",
+          "    <p>Revisa las etiquetas de apertura y cierre.</p>",
+          "  </section>",
+          "</main>",
+          "",
+          "<footer>",
+          "  <p>Fin de la página</p>",
+          "</footer>"
+        ]
+      },
+      {
+        "id": "E07",
+        "title": "Modelo de caja básico",
+        "statement": "Completad el CSS de cajas básicas usando solo selectores de etiqueta. Debéis respetar los colores, medidas y bordes indicados.",
+        "guidance": [
+          "El CSS debe organizar cajas básicas: cabecera, zona principal, secciones y pie.",
+          "Los selectores son solo etiquetas HTML; no hay clases ni identificadores.",
+          "La cabecera debe tener fondo lightgray, padding de 20px y texto centrado.",
+          "main debe tener margin 10px, padding 15px y borde 2px solid black.",
+          "section debe tener margin 10px, padding 10px y borde 1px solid gray.",
+          "footer debe tener el texto centrado.",
+          "Selectores que pueden aparecer: header, main, section y footer."
+        ],
+        "solvedLines": [
+          "header {",
+          "  background-color: lightgray;",
+          "  padding: 20px;",
+          "  text-align: center;",
+          "}",
+          "",
+          "main {",
+          "  margin: 10px;",
+          "  padding: 15px;",
+          "  border: 2px solid black;",
+          "}",
+          "",
+          "section {",
+          "  margin: 10px;",
+          "  padding: 10px;",
+          "  border: 1px solid gray;",
+          "}",
+          "",
+          "footer {",
+          "  text-align: center;",
+          "}"
+        ]
+      },
+      {
+        "id": "E08",
+        "title": "Tabla de pistas",
+        "statement": "Completad una tabla de pistas con encabezados y datos.",
+        "guidance": [
+          "La página debe mostrar una tabla de pistas con dos columnas.",
+          "La primera fila contiene los encabezados de las columnas.",
+          "Después hay tres filas con datos normales.",
+          "Recordad la diferencia entre tabla, fila, encabezado y celda de datos.",
+          "Etiquetas que pueden aparecer: table, tr, th y td."
+        ],
+        "solvedLines": [
+          "<table>",
+          "  <tr>",
+          "    <th>Pista</th>",
+          "    <th>Lugar</th>",
+          "  </tr>",
+          "  <tr>",
+          "    <td>Roma</td>",
+          "    <td>Pabellón</td>",
+          "  </tr>",
+          "  <tr>",
+          "    <td>Árbol</td>",
+          "    <td>Fuente</td>",
+          "  </tr>",
+          "  <tr>",
+          "    <td>QR</td>",
+          "    <td>Puerta</td>",
+          "  </tr>",
+          "</table>"
+        ]
+      }
+    ],
+    "access": "index.html?profesor=PROFE2026"
+  }
 };

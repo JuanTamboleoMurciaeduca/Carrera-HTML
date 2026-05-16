@@ -51,7 +51,7 @@ function formatTime(seconds) {
   return `${m} min ${String(s).padStart(2, '0')} s`;
 }
 function showOnly(viewId) {
-  ['startView', 'gameView'].forEach(id => byId(id).classList.add('hidden'));
+  ['startView', 'gameView', 'teacherView'].forEach(id => byId(id).classList.add('hidden'));
   byId(viewId).classList.remove('hidden');
 }
 function updateTopbar() {
@@ -292,11 +292,60 @@ function startRun() {
     processToken(token);
   }
 }
+
+async function openTeacherView(code) {
+  const codeHash = await sha256Text(normalizeAnswer(code));
+  if (codeHash !== DATA.teacherCodeHash || !DATA.teacher) {
+    showOnly('startView');
+    byId('startMessage').className = 'message bad';
+    byId('startMessage').textContent = 'Código de profesor no válido.';
+    return;
+  }
+  renderTeacher(DATA.teacher);
+}
+function renderTeacher(teacher) {
+  showOnly('teacherView');
+  const challengeMap = Object.fromEntries(teacher.challenges.map(ch => [ch.id, ch]));
+  const exerciseMap = Object.fromEntries(teacher.exercises.map(ex => [ex.id, ex]));
+  const routesHtml = Object.entries(teacher.routes).map(([name, route]) => `
+    <tr><th>${escapeHtml(name)}</th><td>${route.map(id => `${escapeHtml(id)} — ${escapeHtml(challengeMap[id].title)}`).join('<br>')}</td></tr>`).join('');
+  const challengesHtml = teacher.challenges.map(ch => {
+    const ex = exerciseMap[ch.exerciseId];
+    const qrHtml = ch.qrCards.map(card => `<li><strong>${escapeHtml(card.kind)}</strong> — ${escapeHtml(card.label)}<br><code>${escapeHtml(card.url)}</code></li>`).join('');
+    return `
+      <article class="teacher-item">
+        <h3>${escapeHtml(ch.id)} — ${escapeHtml(ch.title)}</h3>
+        <p><strong>Adivinanza:</strong> ${escapeHtml(ch.riddle)}</p>
+        <p><strong>Solución:</strong> ${escapeHtml(ch.solution)}</p>
+        <p><strong>QR correcto:</strong> ${escapeHtml(ch.correctLabel)}</p>
+        <details><summary>Enlaces de QR</summary><ol class="qr-list">${qrHtml}</ol></details>
+        <p><strong>Ejercicio:</strong> ${escapeHtml(ex.title)}</p>
+        <details open><summary>Indicaciones visibles para el alumnado</summary><ul>${ex.guidance.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul></details>
+        <pre class="teacher-code">${escapeHtml(ex.solvedLines.join('\n'))}</pre>
+      </article>`;
+  }).join('');
+  byId('teacherView').innerHTML = `
+    <h2>Vista de profesor</h2>
+    <p>Acceso oculto: abrid <code>index.html?profesor=PROFE2026</code>.</p>
+    <p>La antigua pista 12 aparece aquí como P08. Los enlaces QR no han cambiado.</p>
+    <h3>Ruta</h3>
+    <table>${routesHtml}</table>
+    <h3>Pistas, soluciones, enlaces y códigos resueltos</h3>
+    <div class="teacher-grid">${challengesHtml}</div>
+    <button class="secondary" id="backBtn">Volver</button>`;
+  byId('backBtn').addEventListener('click', () => location.href = 'index.html');
+}
+
 function escapeHtml(value) {
   return String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 function init() {
   const params = new URLSearchParams(location.search);
+  const teacherCode = params.get('profesor');
+  if (teacherCode) {
+    openTeacherView(teacherCode);
+    return;
+  }
   const token = params.get('t');
   if (token) {
     pendingToken = token;

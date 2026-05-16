@@ -56,6 +56,22 @@ Los tokens están en `qr-links.md`.
 - Bonus por rapidez del ejercicio: `max(0, 10 - floor(segundos / 30))`
 - Penalización final por tiempo total: `floor(segundos_totales / 60)`
 
+## Vista de profesor
+
+No hay botón visible de profesor. Se accede abriendo esta dirección:
+
+```txt
+https://JuanTamboleoMurciaeduca.github.io/Carrera-HTML/index.html?profesor=PROFE2026
+```
+
+En local, se puede usar:
+
+```txt
+index.html?profesor=PROFE2026
+```
+
+La antigua pista 12 aparece como P08. Los QR impresos de esa pista siguen siendo los mismos.
+
 ## Exportación
 
 El botón `Exportar JSON` descarga un archivo con ruta, puntuación, tiempos, eventos, QR incorrectos y respuestas enviadas.
