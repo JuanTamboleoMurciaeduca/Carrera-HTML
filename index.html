@@ -9,34 +9,27 @@
 <body>
   <header>
     <h1>Carrera-HTML</h1>
-    <p>Reto de patio por grupos</p>
+    <p>Reto de patio</p>
   </header>
 
   <main>
-    <section id="loginView" class="card">
-      <h2>Entrada de grupo</h2>
-      <p>Introducid vuestro código de grupo.</p>
-      <div class="group-buttons" aria-label="Códigos de grupo">
-        <button data-group="G01">G01</button>
-        <button data-group="G02">G02</button>
-        <button data-group="G03">G03</button>
-        <button data-group="G04">G04</button>
-        <button data-group="G05">G05</button>
-      </div>
-      <label for="manualGroup">Código</label>
-      <input id="manualGroup" type="text" maxlength="20" placeholder="G01">
-      <button id="startBtn">Entrar</button>
-      <p id="loginMessage" class="message"></p>
+    <section id="startView" class="card">
+      <h2>Inicio</h2>
+      <p>Pulsad empezar con el móvil que vais a usar durante toda la carrera.</p>
+      <p>Desde ese momento empezará a contar el tiempo y aparecerá la primera adivinanza.</p>
+      <button id="startBtn">Empezar</button>
+      <p id="startMessage" class="message"></p>
     </section>
 
     <section id="gameView" class="hidden">
       <div class="topbar card">
         <div>
-          <strong id="groupLabel"></strong>
+          <strong id="runLabel">Carrera iniciada</strong>
           <span id="progressLabel"></span>
         </div>
         <div>
           <span id="scoreLabel"></span>
+          <span id="timeLabel"></span>
         </div>
       </div>
 
@@ -44,8 +37,6 @@
       <section id="exerciseCard" class="card hidden"></section>
       <section id="finishCard" class="card hidden"></section>
     </section>
-
-    <section id="teacherView" class="card hidden"></section>
   </main>
 
   <script src="data.js"></script>
